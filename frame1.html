@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>test</title>
+    </head>
+    <body>
+        <h1>frame1</h1>
+        <button id="btnT1">test1</button>
+    </body>
+    <script>
+        document.querySelector('#btnT1').addEventListener('click', (e) => {
+            console.log(e.target.id)
+        })
+
+        var vsT1 = 't1'
+
+        const vsTmp = 'this is const t1'
+        const voTmp  = new Object()
+        function fn_test(){
+            console.log(vsT1)
+            // return voTmp
+            document.querySelector('h1').innerHTML = 'thisis good'
+        }
+    </script>
+</html>

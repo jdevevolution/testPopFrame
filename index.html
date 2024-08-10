@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>test</title>
+    </head>
+    <body>
+        <iframe id="fm1" src="/frame1.html" frameborder="2"></iframe>
+
+        <iframe id='fm2' src="/frame2.html" frameborder="2"></iframe>
+    </body>
+
+    <script>
+        const vaFrame = document.querySelectorAll('iframe')
+
+        var voDoc = new Map()
+
+        vaFrame.forEach((obj) => {
+            obj.addEventListener('load',  (e) => {
+                voDoc.set(e.target.id, e.target.contentWindow)
+            })
+        })
+    </script>
+</html>
