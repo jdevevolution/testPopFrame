@@ -11,12 +11,20 @@
     <script>
         const vaFrame = document.querySelectorAll('iframe')
 
-        var voDoc = new Map()
+        const voDoc = new Map()
 
         vaFrame.forEach((obj) => {
             obj.addEventListener('load',  (e) => {
                 voDoc.set(e.target.id, e.target.contentWindow)
             })
         })
+
+        fn_getVaFrame = () => {
+            return vaFrame
+        }
+
+        fn_getVoDoc = () => {
+            return voDoc
+        }
     </script>
 </html>
